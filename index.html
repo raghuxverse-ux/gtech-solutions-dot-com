@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gtech Solutions | Enterprise Technology</title>
+    <!-- Premium Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syncopate:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Three.js for Spline-like 3D, and GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="loading">
+    <!-- Initial Loader -->
+    <div class="loader-overlay">
+        <div class="loader-content">
+            <div class="loader-text">GTECH</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">GTECH <span class="dot">.</span></div>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#solutions" class="nav-link">Solutions</a></li>
+                <li><a href="#industries" class="nav-link">Industries</a></li>
+                <li>
+                    <button id="theme-toggle" class="btn btn-outline theme-btn" aria-label="Toggle Day/Night Mode">
+                        <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            style="display:none;">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+                </li>
+                <li><a href="#contact" class="btn btn-solid">Consultation</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section with ThreeJS / Spline-Style 3D -->
+        <section id="hero" class="hero-section">
+            <div id="canvas-container" class="canvas-container"></div>
+            <div class="hero-content">
+                <div class="hero-text-wrapper">
+                    <h1 class="hero-title">
+                        <span class="line"><span class="reveal-text">Gtech</span></span>
+                        <span class="line"><span class="reveal-text">Solutions</span></span>
+                    </h1>
+                </div>
+                <div class="hero-subtitle-wrapper">
+                    <p class="hero-subtitle reveal-text delay-1">Architecting the future through<br>Hardware, Software,
+                        and Spatial computing.</p>
+                </div>
+            </div>
+
+            <div class="scroll-prompt">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <span class="scroll-text">SYSTEM INITIATION</span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container container-large grid-2-col">
+                <div class="about-left">
+                    <h2 class="section-heading text-reveal">Pioneering industrial<br>evolution.</h2>
+                </div>
+                <div class="about-right">
+                    <p class="body-text fade-up">At Gtech Solutions, we specialize in building enterprise-grade
+                        ecosystems. Our expertise bridges the physical and digital worlds—transforming abstract R&D into
+                        functional, deployed technologies that power modern industry.</p>
+                    <div class="stats-grid fade-up delay-1">
+                        <div class="stat-item">
+                            <span class="stat-num">01.</span>
+                            <span class="stat-label">Precision Engine</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">98%</span>
+                            <span class="stat-label">Efficiency Gain</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solutions Section (Bento Layout) -->
+        <section id="solutions" class="solutions-section">
+            <div class="container container-large">
+                <div class="section-header fade-up">
+                    <span class="kicker">// 02. CORE TECHNOLOGIES</span>
+                    <h2 class="section-heading text-reveal">Integrated Solutions</h2>
+                </div>
+
+                <div class="bento-grid-expanded">
+                    <!-- AR / VR -->
+                    <div class="bento-item xr-box fade-up">
+                        <img src="robot_ar_vr.png" alt="AR VR Robot" class="bento-media" />
+                        <div class="bento-bg"></div>
+                        <div class="bento-content">
+                            <div class="bento-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                    </path>
+                                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                                </svg>
+                            </div>
+                            <h3>AR / VR Innovation</h3>
+                            <p>Spatial computing environments for mission-critical training, simulation, and remote ops.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- App Dev -->
+                    <div class="bento-item dev-box fade-up delay-1">
+                        <img src="app_dev.png" alt="App Development" class="bento-media" />
+                        <div class="bento-bg"></div>
+                        <div class="bento-content">
+                            <div class="bento-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                    <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                                </svg>
+                            </div>
+                            <h3>Application Development</h3>
+                            <p>Native Android & iOS platforms, plus scalable Web-based Business Applications on PHP and
+                                Java.</p>
+                        </div>
+                    </div>
+
+                    <!-- Cloud WiFi -->
+                    <div class="bento-item cloud-box fade-up delay-2">
+                        <img src="cloud_wifi.png" alt="Cloud WiFi" class="bento-media" />
+                        <div class="bento-bg"></div>
+                        <div class="bento-content">
+                            <div class="bento-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                                    <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+                                    <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                                    <line x1="12" y1="20" x2="12.01" y2="20"></line>
+                                </svg>
+                            </div>
+                            <h3>Cloud Managed WiFi</h3>
+                            <p>Enterprise-grade wireless networking solutions with centralized cloud management and
+                                analytics.</p>
+                        </div>
+                    </div>
+
+                    <!-- Database Management -->
+                    <div class="bento-item db-box fade-up">
+                        <div class="bento-bg"></div>
+                        <div class="bento-content">
+                            <div class="bento-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                                </svg>
+                            </div>
+                            <h3>Database Systems</h3>
+                            <p>Secure, high-availability data architectures deployed on MySQL and MS SQL Server
+                                infrastructures.</p>
+                        </div>
+                    </div>
+
+                    <!-- Hardware -->
+                    <div class="bento-item hw-box fade-up delay-1">
+                        <div class="bento-bg"></div>
+                        <div class="bento-content">
+                            <div class="bento-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                                    <rect x="9" y="9" width="6" height="6"></rect>
+                                    <line x1="9" y1="1" x2="9" y2="4"></line>
+                                    <line x1="15" y1="1" x2="15" y2="4"></line>
+                                    <line x1="9" y1="20" x2="9" y2="23"></line>
+                                    <line x1="15" y1="20" x2="15" y2="23"></line>
+                                    <line x1="20" y1="9" x2="23" y2="9"></line>
+                                    <line x1="20" y1="14" x2="23" y2="14"></line>
+                                    <line x1="1" y1="9" x2="4" y2="9"></line>
+                                    <line x1="1" y1="14" x2="4" y2="14"></line>
+                                </svg>
+                            </div>
+                            <h3>Hardware Engineering</h3>
+                            <p>Industrial scale autonomous robotics, IoT infrastructures, and advanced circuitry.</p>
+                        </div>
+                    </div>
+
+                    <!-- Resource Deployment -->
+                    <div class="bento-item deploy-box fade-up delay-2">
+                        <div class="bento-bg"></div>
+                        <div class="bento-content">
+                            <div class="bento-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                    <polyline points="2 17 12 22 22 17"></polyline>
+                                    <polyline points="2 12 12 17 22 12"></polyline>
+                                </svg>
+                            </div>
+                            <h3>Resource Deployment</h3>
+                            <p>Strategic IT staffing and managed resource deployment services for enterprise scaling.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industries & R&D Section -->
+        <section id="industries" class="industries-section">
+            <div class="container container-large flex-responsive">
+                <div class="ind-left fade-up">
+                    <span class="kicker">// 03. APPLICABILITY</span>
+                    <h2 class="section-heading">Industries Served</h2>
+                    <ul class="industry-list">
+                        <li>Aerospace & Defense <span class="arrow">→</span></li>
+                        <li>Automotive Manufacturing <span class="arrow">→</span></li>
+                        <li>Precision Healthcare <span class="arrow">→</span></li>
+                        <li>Global Logistics <span class="arrow">→</span></li>
+                    </ul>
+                </div>
+
+                <div class="ind-right rd-block fade-up delay-1">
+                    <span class="kicker">// 04. FORWARD LOOKING</span>
+                    <h2 class="section-heading">Research & Dev</h2>
+                    <p class="body-text">Our labs operate continuously to prototype next-generation solutions. Over 20%
+                        of annual revenue is channeled directly to raw technological discovery.</p>
+                    <div class="rd-visual-container">
+                        <div class="rd-glow"></div>
+                        <div class="rd-lines"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container padding-y-large">
+                <div class="contact-card fade-up">
+                    <h2 class="section-heading text-center text-reveal">Initiate Protocol.</h2>
+                    <p class="text-center body-text fade-up delay-1">Secure your competitive technological advantage.
+                    </p>
+                    <form class="contact-form fade-up delay-2" onsubmit="event.preventDefault();">
+                        <div class="input-group">
+                            <input type="email" placeholder="Corporate Email Address" required class="input-field">
+                            <button type="submit" class="btn btn-solid">Request Access</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container container-large footer-grid">
+            <div class="footer-brand">
+                <div class="logo">GTECH <span class="dot">.</span></div>
+                <p class="footer-desc">Enterprise technology firm.</p>
+            </div>
+            <div class="footer-links-group">
+                <h4>Legal</h4>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="footer-links-group">
+                <h4>Connect</h4>
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+            </div>
+            <div class="footer-system">
+                <div class="status-indicator">
+                    <div class="pulse"></div>
+                    <span>Systems Operational</span>
+                </div>
+                <p class="copyright">&copy; 2026 Gtech Solutions.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Core Logic -->
+    <script src="script.js"></script>
+</body>
+
+</html>
