@@ -115,135 +115,312 @@
         </section>
 
         <!-- Solutions Section (Bento Layout) -->
-        <section id="solutions" class="solutions-section">
-            <div class="container container-large">
-                <div class="section-header fade-up">
-                    <span class="kicker">// 02. CORE TECHNOLOGIES</span>
-                    <h2 class="section-heading text-reveal">Integrated Solutions</h2>
+        <div id="solutions-stage" style="background: #000; position: relative;">
+            <section id="solutions" class="solutions-section"
+                style="background: var(--surface-1); transform-origin: top center; overflow: hidden; will-change: transform, border-radius; box-shadow: 0px 40px 100px rgba(0,0,0,0.8); border: 1px solid rgba(255,255,255,0.05);">
+                <div class="container container-large">
+                    <div class="section-header fade-up">
+                        <span class="kicker">// 02. CORE TECHNOLOGIES</span>
+                        <h2 class="section-heading text-reveal">Integrated Solutions</h2>
+                    </div>
+
+                    <div class="bento-grid-expanded">
+                        <!-- AR / VR -->
+                        <div class="bento-item xr-box fade-up">
+                            <img src="robot_ar_vr.jpg" alt="AR VR Robot" class="bento-media" />
+                            <div class="bento-bg"></div>
+                            <div class="bento-content">
+                                <div class="bento-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path
+                                            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                        </path>
+                                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                                    </svg>
+                                </div>
+                                <h3>AR / VR Innovation</h3>
+                                <p>Spatial computing environments for mission-critical training, simulation, and remote
+                                    ops.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- App Dev -->
+                        <div class="bento-item dev-box fade-up delay-1">
+                            <img src="app_dev.jpg" alt="App Development" class="bento-media" />
+                            <div class="bento-bg"></div>
+                            <div class="bento-content">
+                                <div class="bento-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                        <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                                    </svg>
+                                </div>
+                                <h3>Application Development</h3>
+                                <p>Native Android & iOS platforms, plus scalable Web-based Business Applications on PHP
+                                    and
+                                    Java.</p>
+                            </div>
+                        </div>
+
+                        <!-- Cloud WiFi -->
+                        <div class="bento-item cloud-box fade-up delay-2">
+                            <img src="cloud_wifi.jpg" alt="Cloud WiFi" class="bento-media" />
+                            <div class="bento-bg"></div>
+                            <div class="bento-content">
+                                <div class="bento-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                                        <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+                                        <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                                        <line x1="12" y1="20" x2="12.01" y2="20"></line>
+                                    </svg>
+                                </div>
+                                <h3>Cloud Managed WiFi</h3>
+                                <p>Enterprise-grade wireless networking solutions with centralized cloud management and
+                                    analytics.</p>
+                            </div>
+                        </div>
+
+                        <!-- Database Management -->
+                        <div class="bento-item db-box fade-up">
+                            <img src="database-system.jpg" alt="database-system" class="bento-media" />
+                            <div class="bento-bg"></div>
+                            <div class="bento-content">
+                                <div class="bento-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                                    </svg>
+                                </div>
+                                <h3>Database Systems</h3>
+                                <p>Secure, high-availability data architectures deployed on MySQL and MS SQL Server
+                                    infrastructures.</p>
+                            </div>
+                        </div>
+
+                        <!-- Hardware -->
+                        <div class="bento-item hw-box fade-up delay-1">
+                            <img src="hardware.jpg" alt="hardware" class="bento-media" />
+                            <div class="bento-bg"></div>
+                            <div class="bento-content">
+                                <div class="bento-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                                        <rect x="9" y="9" width="6" height="6"></rect>
+                                        <line x1="9" y1="1" x2="9" y2="4"></line>
+                                        <line x1="15" y1="1" x2="15" y2="4"></line>
+                                        <line x1="9" y1="20" x2="9" y2="23"></line>
+                                        <line x1="15" y1="20" x2="15" y2="23"></line>
+                                        <line x1="20" y1="9" x2="23" y2="9"></line>
+                                        <line x1="20" y1="14" x2="23" y2="14"></line>
+                                        <line x1="1" y1="9" x2="4" y2="9"></line>
+                                        <line x1="1" y1="14" x2="4" y2="14"></line>
+                                    </svg>
+                                </div>
+                                <h3>Hardware Engineering</h3>
+                                <p>Industrial scale autonomous robotics, IoT infrastructures, and advanced circuitry.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Resource Deployment -->
+                        <div class="bento-item deploy-box fade-up delay-2">
+                            <img src="resourse-deployment.jpg" alt="resourse-deployment" class="bento-media" />
+                            <div class="bento-bg"></div>
+                            <div class="bento-content">
+                                <div class="bento-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                        <polyline points="2 17 12 22 22 17"></polyline>
+                                        <polyline points="2 12 12 17 22 12"></polyline>
+                                    </svg>
+                                </div>
+                                <h3>Resource Deployment</h3>
+                                <p>Strategic IT staffing and managed resource deployment services for enterprise
+                                    scaling.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="horizontal-slider">
+            <div class="h-track">
+                <!-- Panel 1 -->
+                <div class="h-panel">
+                    <div class="h-card">
+                        <img src="vr.jpg" class="h-image" alt="Virtual Reality Environment" />
+                        <div class="h-overlay"></div>
+                        <div class="h-content">
+                            <div class="h-badge">EXPERIENCE XR</div>
+                            <h2 class="h-title">Immersive Realities</h2>
+                            <p class="h-desc">Seamlessly bridge the physical and digital. Uncover the architectural
+                                marvels of next-gen spatial environments.</p>
+                            <div class="h-play-btn">
+                                <svg viewBox="0 0 24 24" fill="none" class="play-icon">
+                                    <path d="M8 5v14l11-7z" fill="currentColor" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="bento-grid-expanded">
-                    <!-- AR / VR -->
-                    <div class="bento-item xr-box fade-up">
-                        <img src="robot_ar_vr.png" alt="AR VR Robot" class="bento-media" />
-                        <div class="bento-bg"></div>
-                        <div class="bento-content">
-                            <div class="bento-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path
-                                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
-                                    </path>
-                                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                <!-- Panel 2 -->
+                <div class="h-panel">
+                    <div class="h-card">
+                        <img src="system_architecture.jpg" class="h-image" alt="Application Development" />
+                        <div class="h-overlay"></div>
+                        <div class="h-content">
+                            <div class="h-badge">ENTERPRISE APPS</div>
+                            <h2 class="h-title">System Architecture</h2>
+                            <p class="h-desc">Native Android & iOS platforms paired with scalable web infrastructure
+                                built for longevity.</p>
+                            <div class="h-play-btn">
+                                <svg viewBox="0 0 24 24" fill="none" class="play-icon">
+                                    <path d="M8 5v14l11-7z" fill="currentColor" />
                                 </svg>
                             </div>
-                            <h3>AR / VR Innovation</h3>
-                            <p>Spatial computing environments for mission-critical training, simulation, and remote ops.
-                            </p>
                         </div>
                     </div>
+                </div>
 
-                    <!-- App Dev -->
-                    <div class="bento-item dev-box fade-up delay-1">
-                        <img src="app_dev.png" alt="App Development" class="bento-media" />
-                        <div class="bento-bg"></div>
-                        <div class="bento-content">
-                            <div class="bento-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                                    <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                <!-- Panel 3 -->
+                <div class="h-panel">
+                    <div class="h-card">
+                        <img src="cloud_network.jpg" class="h-image" alt="Cloud Networks" />
+                        <div class="h-overlay"></div>
+                        <div class="h-content">
+                            <div class="h-badge">CONNECTIVITY</div>
+                            <h2 class="h-title">Cloud Networks</h2>
+                            <p class="h-desc">Enterprise-grade wireless solutions scaling globally securely with zero
+                                downtime.</p>
+                            <div class="h-play-btn">
+                                <svg viewBox="0 0 24 24" fill="none" class="play-icon">
+                                    <path d="M8 5v14l11-7z" fill="currentColor" />
                                 </svg>
                             </div>
-                            <h3>Application Development</h3>
-                            <p>Native Android & iOS platforms, plus scalable Web-based Business Applications on PHP and
-                                Java.</p>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Cloud WiFi -->
-                    <div class="bento-item cloud-box fade-up delay-2">
-                        <img src="cloud_wifi.png" alt="Cloud WiFi" class="bento-media" />
-                        <div class="bento-bg"></div>
-                        <div class="bento-content">
-                            <div class="bento-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
-                                    <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
-                                    <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
-                                    <line x1="12" y1="20" x2="12.01" y2="20"></line>
+                <!-- Panel 4 -->
+                <div class="h-panel">
+                    <div class="h-card">
+                        <img src="autonomous_agent.jpg" class="h-image" alt="Robotics Innovation" />
+                        <div class="h-overlay"></div>
+                        <div class="h-content">
+                            <div class="h-badge">ROBOTICS</div>
+                            <h2 class="h-title">Autonomous Agents</h2>
+                            <p class="h-desc">Deploying adaptive robotic systems optimized for unpredictable industrial
+                                workflows.</p>
+                            <div class="h-play-btn">
+                                <svg viewBox="0 0 24 24" fill="none" class="play-icon">
+                                    <path d="M8 5v14l11-7z" fill="currentColor" />
                                 </svg>
                             </div>
-                            <h3>Cloud Managed WiFi</h3>
-                            <p>Enterprise-grade wireless networking solutions with centralized cloud management and
-                                analytics.</p>
-                        </div>
-                    </div>
-
-                    <!-- Database Management -->
-                    <div class="bento-item db-box fade-up">
-                        <div class="bento-bg"></div>
-                        <div class="bento-content">
-                            <div class="bento-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-                                </svg>
-                            </div>
-                            <h3>Database Systems</h3>
-                            <p>Secure, high-availability data architectures deployed on MySQL and MS SQL Server
-                                infrastructures.</p>
-                        </div>
-                    </div>
-
-                    <!-- Hardware -->
-                    <div class="bento-item hw-box fade-up delay-1">
-                        <div class="bento-bg"></div>
-                        <div class="bento-content">
-                            <div class="bento-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
-                                    <rect x="9" y="9" width="6" height="6"></rect>
-                                    <line x1="9" y1="1" x2="9" y2="4"></line>
-                                    <line x1="15" y1="1" x2="15" y2="4"></line>
-                                    <line x1="9" y1="20" x2="9" y2="23"></line>
-                                    <line x1="15" y1="20" x2="15" y2="23"></line>
-                                    <line x1="20" y1="9" x2="23" y2="9"></line>
-                                    <line x1="20" y1="14" x2="23" y2="14"></line>
-                                    <line x1="1" y1="9" x2="4" y2="9"></line>
-                                    <line x1="1" y1="14" x2="4" y2="14"></line>
-                                </svg>
-                            </div>
-                            <h3>Hardware Engineering</h3>
-                            <p>Industrial scale autonomous robotics, IoT infrastructures, and advanced circuitry.</p>
-                        </div>
-                    </div>
-
-                    <!-- Resource Deployment -->
-                    <div class="bento-item deploy-box fade-up delay-2">
-                        <div class="bento-bg"></div>
-                        <div class="bento-content">
-                            <div class="bento-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                                    <polyline points="2 17 12 22 22 17"></polyline>
-                                    <polyline points="2 12 12 17 22 12"></polyline>
-                                </svg>
-                            </div>
-                            <h3>Resource Deployment</h3>
-                            <p>Strategic IT staffing and managed resource deployment services for enterprise scaling.
-                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                if (window.gsap && window.ScrollTrigger) {
+
+                    // --- Solutions Section Zoom-In Overhaul ---
+                    gsap.fromTo("#solutions",
+                        { scale: 0.65, y: 150, borderRadius: "60px", opacity: 0.5 },
+                        {
+                            scale: 1,
+                            y: 0,
+                            borderRadius: "0px",
+                            opacity: 1,
+                            ease: "power2.out",
+                            scrollTrigger: {
+                                trigger: "#solutions-stage",
+                                start: "top 95%",
+                                end: "top 5%",
+                                scrub: 1
+                            }
+                        }
+                    );
+
+                    // --- Horizontal Slider with Sequential Zoom ---
+                    const panels = gsap.utils.toArray(".h-panel");
+                    const track = document.querySelector(".h-track");
+
+                    if (panels.length && track) {
+                        const tl = gsap.timeline({
+                            scrollTrigger: {
+                                trigger: ".horizontal-slider",
+                                pin: true,
+                                scrub: 1,
+                                start: "top top",
+                                end: () => "+=" + (window.innerWidth * panels.length * 2) // Extended scroll distance for smoothness
+                            }
+                        });
+
+                        panels.forEach((panel, i) => {
+                            const card = panel.querySelector(".h-card");
+                            const image = panel.querySelector(".h-image");
+                            const content = panel.querySelector(".h-content");
+
+                            // 1. Zoom the card to full screen
+                            tl.to(card, {
+                                width: "100%",
+                                height: "100vh",
+                                borderRadius: "0px",
+                                ease: "power2.inOut",
+                                duration: 1.5
+                            });
+
+                            // Subtle image scale alongside card zoom
+                            if (image) {
+                                tl.to(image, {
+                                    scale: 1.15,
+                                    ease: "power2.inOut",
+                                    duration: 1.5
+                                }, "<");
+                            }
+
+                            // Fade out text early
+                            if (content) {
+                                tl.to(content, {
+                                    opacity: 0,
+                                    y: 30,
+                                    scale: 0.95,
+                                    ease: "power2.in",
+                                    duration: 1
+                                }, "<");
+                            }
+
+                            // 2. If it's not the last panel, move the track horizontally to bring next card to center
+                            if (i < panels.length - 1) {
+                                // Move track by exactly -100vw per card
+                                tl.to(track, {
+                                    x: "-" + (100 * (i + 1)) + "vw",
+                                    ease: "power1.inOut", // Elegant deceleration between cards
+                                    duration: 1.5
+                                });
+                            }
+                        });
+                    }
+                }
+            });
+        </script>
+
 
         <!-- Industries & R&D Section -->
         <section id="industries" class="industries-section">
@@ -266,6 +443,8 @@
                         of annual revenue is channeled directly to raw technological discovery.</p>
                     <div class="rd-visual-container">
                         <div class="rd-glow"></div>
+                        <img src="research.jpg" alt="research" class="bento-media" />
+
                         <div class="rd-lines"></div>
                     </div>
                 </div>
@@ -293,27 +472,63 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container container-large footer-grid">
+
+            <!-- Brand & Status -->
             <div class="footer-brand">
                 <div class="logo">GTECH <span class="dot">.</span></div>
                 <p class="footer-desc">Enterprise technology firm.</p>
-            </div>
-            <div class="footer-links-group">
-                <h4>Legal</h4>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-            </div>
-            <div class="footer-links-group">
-                <h4>Connect</h4>
-                <a href="#">LinkedIn</a>
-                <a href="#">GitHub</a>
-            </div>
-            <div class="footer-system">
-                <div class="status-indicator">
+                <div class="status-indicator" style="margin-top: 2rem;">
                     <div class="pulse"></div>
                     <span>Systems Operational</span>
                 </div>
-                <p class="copyright">&copy; 2026 Gtech Solutions.</p>
+                <p class="copyright" style="margin-top: 1.5rem; opacity: 0.6; font-size: 0.8rem;">
+                    © 2026 G-tech India.<br>All Rights Reserved.
+                </p>
             </div>
+
+            <!-- Offices Part 1 -->
+            <div class="footer-links-group">
+                <h4>Registered Office</h4>
+                <p class="footer-address" style="margin-top: 0;">
+                    B-212, Raj Ratan Ind. Estate,<br>
+                    Next to American Spring,<br>
+                    Opp. S.N.D.T, Ramchandra Extn.,<br>
+                    Malad (West), Mumbai
+                </p>
+                <p class="footer-contact" style="margin-top: 1rem;">
+                    <strong>Phone:</strong><br>
+                    +91 98210 24772
+                </p>
+            </div>
+
+            <!-- Offices Part 2 -->
+            <div class="footer-links-group">
+                <h4>Corporate Address</h4>
+                <p class="footer-address" style="margin-top: 0;">
+                    Villa 6, Girdhar Park CHS,<br>
+                    Marve Road, Mith Chowky,<br>
+                    Malad (West), Mumbai 400064
+                </p>
+                <p class="footer-contact" style="margin-top: 1rem;">
+                    <strong>Office:</strong><br>
+                    +91 22 6726 7800
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links-group">
+                <div style="margin-bottom: 2rem;">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+                <div>
+                    <h4>Connect</h4>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">GitHub</a>
+                </div>
+            </div>
+
         </div>
     </footer>
 
