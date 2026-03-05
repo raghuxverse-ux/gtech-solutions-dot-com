@@ -17,6 +17,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+
 </head>
 
 <body class="loading">
@@ -368,7 +370,7 @@
                                 pin: true,
                                 scrub: 1,
                                 start: "top top",
-                                end: () => "+=" + (window.innerWidth * panels.length * 2) // Extended scroll distance for smoothness
+                                end: () => "+=" + (window.innerWidth * panels.length * 2)
                             }
                         });
 
@@ -421,6 +423,32 @@
             });
         </script>
 
+        <!-- // what we do  -->
+
+        <section class="lang-scroll-section">
+            <div class="squares-bg">
+                <div class="squares-grid"></div>
+            </div>
+            <div class="lang-scroll-fade lang-scroll-fade--top"></div>
+            <div class="lang-scroll-fade lang-scroll-fade--bottom"></div>
+            <div class="lang-scroll-track">
+                <div class="lang-scroll-list">
+                    <span class="lang-scroll-item">JavaScript</span>
+                    <span class="lang-scroll-item">Python</span>
+                    <span class="lang-scroll-item">Rust</span>
+                    <span class="lang-scroll-item">TypeScript</span>
+                    <span class="lang-scroll-item">Go</span>
+                    <span class="lang-scroll-item">C++</span>
+                    <!-- Duplicate for seamless loop -->
+                    <span class="lang-scroll-item">JavaScript</span>
+                    <span class="lang-scroll-item">Python</span>
+                    <span class="lang-scroll-item">Rust</span>
+                    <span class="lang-scroll-item">TypeScript</span>
+                    <span class="lang-scroll-item">Go</span>
+                    <span class="lang-scroll-item">C++</span>
+                </div>
+            </div>
+        </section>
 
         <!-- Industries & R&D Section -->
         <section id="industries" class="industries-section">
@@ -455,7 +483,7 @@
         <section id="contact" class="contact-section">
             <div class="container padding-y-large">
                 <div class="contact-card fade-up">
-                    <h2 class="section-heading text-center text-reveal">Initiate Protocol.</h2>
+                    <h1 class="section-heading text-center text-reveal">INTTIATE PROTOCOL.</h1>
                     <p class="text-center body-text fade-up delay-1">Secure your competitive technological advantage.
                     </p>
                     <form class="contact-form fade-up delay-2" onsubmit="event.preventDefault();">
@@ -532,8 +560,10 @@
         </div>
     </footer>
 
+
     <!-- Core Logic -->
     <script src="script.js"></script>
 </body>
+
 
 </html>
