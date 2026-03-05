@@ -731,7 +731,7 @@ section {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr 1fr 0.5fr;
     gap: 2.5rem;
 }
 
@@ -1126,4 +1126,5 @@ section {
 .lang-scroll-fade {
     z-index: 2;
 }
+
 
