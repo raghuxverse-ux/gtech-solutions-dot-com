@@ -1,6 +1,10 @@
 // Register GSAP Plugins
 gsap.registerPlugin(ScrollTrigger);
 
+document.addEventListener("DOMContentLoaded", () => {
+    initScrollAnimations();
+});
+
 // --- Initialization & Loader ---
 window.addEventListener("load", () => {
     const tl = gsap.timeline();
@@ -23,6 +27,31 @@ window.addEventListener("load", () => {
             }
         }, "+=0.2");
 });
+
+// HEADING TEXT REVEAL
+// gsap.from(".text-reveal", {
+//     scrollTrigger: {
+//         trigger: "#contact",
+//         start: "top 70%",
+//     },
+//     y: 60,
+//     opacity: 0,
+//     duration: 1,
+//     ease: "power3.out"
+// });
+
+// STAGGER ELEMENTS
+// gsap.from("#contact .fade-up", {
+//     scrollTrigger: {
+//         trigger: "#contact",
+//         start: "top 70%",
+//     },
+//     y: 40,
+//     opacity: 0,
+//     duration: 1,
+//     stagger: 0.2,
+//     ease: "power3.out"
+// });
 
 // --- Theme Toggle ---
 function initThemeToggle() {
@@ -80,6 +109,33 @@ function initHeroAnimations() {
 
 // --- Scroll Animations ---
 function initScrollAnimations() {
+
+    // Optimized SplitText Animation for each element
+    const textRevealElements = document.querySelectorAll(".text-reveal");
+
+    textRevealElements.forEach((el) => {
+        const splitText = new SplitType(el, { types: "chars" });
+        el.classList.add("split-type-initialized");
+
+        gsap.from(splitText.chars, {
+
+            y: 80,
+            opacity: 0,
+            stagger: {
+                amount: 0.8,
+                from: "center"
+            },
+            ease: "power4.out",
+            scrollTrigger: {
+                trigger: el,
+                start: "top 85%",
+                end: "top 40%",
+                scrub: true
+            }
+        });
+    });
+
+
     // Navbar behavior
     const navbar = document.querySelector(".navbar");
     window.addEventListener("scroll", () => {
@@ -105,20 +161,7 @@ function initScrollAnimations() {
         });
     });
 
-    // Split text reveal for headings
-    const revealHeadings = document.querySelectorAll(".section-heading.text-reveal");
-    revealHeadings.forEach((heading) => {
-        // Simple faux-splittext (GSAP splitText is premium, we use a simple opacity reveal)
-        gsap.to(heading, {
-            scrollTrigger: {
-                trigger: heading,
-                start: "top 85%",
-            },
-            opacity: 1,
-            duration: 1.5,
-            ease: "power3.out"
-        });
-    });
+
 
     // Bento Box parallax hover effect
     const bentoItems = document.querySelectorAll('.bento-item');
